@@ -1,0 +1,60 @@
+$color-blue: #0c5c78;
+$color-violet: #380036;
+$color-grey: #818181;
+.item {
+    width: 100%;
+    margin: 24px 0;
+    position: relative;
+    flex-shrink: 0;
+    &:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .selectLabel {
+            order: -1;
+        }
+    }
+}
+
+.itemBar {
+    width: 100%;
+    height: 2px;
+    background: #7d7d7d;
+    transition: .1s all;
+}
+
+label {
+    color: #7d7d7d;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    transition: .2s ease-out all;
+    font-size: 16px;
+}
+
+input {
+    color: #7d7d7d;
+    font-size: 16px;
+    border: none;
+    line-height: 22px;
+    width: 100%;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus+label {
+    top: -22px;
+    font-size: 13px;
+}
+
+input:not(:placeholder-shown)+label {
+    top: -22px;
+    font-size: 13px;
+}
+
+input:focus~.item__bar {
+    background: $color-blue;
+}

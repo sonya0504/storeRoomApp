@@ -1,0 +1,16 @@
+$color-blue: #0c5c78;
+$color-violet: #380036;
+$color-grey: #818181;
+.wrapper {
+    width: 80%;
+    background-color: white;
+    color: $color-violet;
+    margin: 40px auto 0;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}

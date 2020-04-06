@@ -1,0 +1,40 @@
+$color-blue: #0c5c78;
+$color-violet: #380036;
+$color-grey: #818181;
+.listItem {
+    margin-top: 20px;
+    min-height: 80px;
+    width: 30%;
+    border: 1px solid $color-violet;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+        .icon {
+            font-size: 20px;
+            margin: 0 20px;
+        }
+        .name {
+            display: inline;
+        }
+        .unit {
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+}
+
+.productsList {
+    list-style: none;
+    padding: 0 10px 10px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    span {
+        display: block;
+    }
+}

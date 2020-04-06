@@ -1,0 +1,43 @@
+$color-blue: #0c5c78;
+$color-violet: #380036;
+$color-grey: #818181;
+.wrapper {
+    width: 50%;
+    margin: 50px auto 100px;
+    background-color: white;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px 40px;
+}
+
+.wrapper h2 {
+    color: $color-blue;
+}
+
+.form {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.button {
+    font-size: 10px;
+    text-decoration: none;
+    padding: 7px 12px;
+    font-weight: 500;
+    background: none;
+    border: 2px solid $color-blue;
+    color: white;
+    background-color: $color-blue;
+    margin: 0 auto;
+    cursor: pointer;
+    &:hover {
+        color: $color-blue;
+        background-color: white;
+    }
+}
