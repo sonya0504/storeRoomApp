@@ -7,8 +7,8 @@ import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import { faOilCan } from '@fortawesome/free-solid-svg-icons';
 
 const productsList = [{
+    'fruits and vegetables': {
         icon: faPepperHot,
-        category: 'fruits and vegetables',
         unit: 'kg',
         products: [{
                 name: 'banana',
@@ -33,12 +33,11 @@ const productsList = [{
             {
                 name: 'tomatoes',
                 amount: 0.5
-            },
+            }
         ],
     },
-    {
+    'meat and fish': {
         icon: faDrumstickBite,
-        category: 'meat and fish',
         unit: 'kg',
         products: [{
                 name: 'chicken breast',
@@ -62,9 +61,8 @@ const productsList = [{
             },
         ],
     },
-    {
+    'flour, pasta and groats': {
         icon: faBoxes,
-        category: 'flour, pasta and groats',
         unit: 'package',
         products: [{
                 name: 'coconut floor',
@@ -88,9 +86,8 @@ const productsList = [{
             },
         ],
     },
-    {
+    'beverages / drink': {
         icon: faWineBottle,
-        category: 'beverages / drink',
         unit: 'l',
         products: [{
                 name: 'coconut drink',
@@ -106,9 +103,8 @@ const productsList = [{
             },
         ],
     },
-    {
+    'oil': {
         icon: faOilCan,
-        category: 'oil',
         unit: 'l',
         products: [{
                 name: 'coconut oil',
@@ -124,9 +120,8 @@ const productsList = [{
             },
         ],
     },
-    {
+    'nuts': {
         icon: faSeedling,
-        category: 'nuts',
         unit: 'package',
         products: [{
                 name: 'almounts',
@@ -142,9 +137,8 @@ const productsList = [{
             },
         ],
     },
-    {
+    'other': {
         icon: faEgg,
-        category: 'other',
         unit: 'package',
         products: [{
                 name: 'eggs',
@@ -155,7 +149,7 @@ const productsList = [{
                 amount: 1,
             },
         ],
-    },
-];
+    }
+}];
 
 export default productsList;

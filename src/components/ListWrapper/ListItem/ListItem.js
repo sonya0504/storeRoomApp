@@ -15,8 +15,8 @@ const ListItem = ({
         </div>
         <ul className={styles.productsList}>
             {products.map(item => (
-                <li key={item.name} className={styles.product}>
-                    <span>{item.name}</span> <span>{item.amount}</span>
+                <li key={item.products.name} className={styles.product}>
+                    <span>{item.products.name}</span> <span>{item.products.amount}</span>
                 </li>
             ))}
         </ul>

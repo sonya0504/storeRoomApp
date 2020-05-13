@@ -16,3 +16,7 @@ body {
     height: 100vh;
     color: white;
 }
+
+h1 {
+    margin-left: 10px;
+}
