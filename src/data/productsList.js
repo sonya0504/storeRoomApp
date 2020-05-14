@@ -7,7 +7,7 @@ import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import { faOilCan } from '@fortawesome/free-solid-svg-icons';
 
 const productsList = [{
-    'fruits and vegetables': {
+        category: 'fruits and vegetables',
         icon: faPepperHot,
         unit: 'kg',
         products: [{
@@ -36,7 +36,8 @@ const productsList = [{
             }
         ],
     },
-    'meat and fish': {
+    {
+        category: 'meat and fish',
         icon: faDrumstickBite,
         unit: 'kg',
         products: [{
@@ -61,7 +62,8 @@ const productsList = [{
             },
         ],
     },
-    'flour, pasta and groats': {
+    {
+        category: 'flour, pasta and groats',
         icon: faBoxes,
         unit: 'package',
         products: [{
@@ -86,7 +88,8 @@ const productsList = [{
             },
         ],
     },
-    'beverages / drink': {
+    {
+        category: 'beverages / drink',
         icon: faWineBottle,
         unit: 'l',
         products: [{
@@ -103,7 +106,8 @@ const productsList = [{
             },
         ],
     },
-    'oil': {
+    {
+        category: 'oil',
         icon: faOilCan,
         unit: 'l',
         products: [{
@@ -120,7 +124,8 @@ const productsList = [{
             },
         ],
     },
-    'nuts': {
+    {
+        category: 'nuts',
         icon: faSeedling,
         unit: 'package',
         products: [{
@@ -137,7 +142,8 @@ const productsList = [{
             },
         ],
     },
-    'other': {
+    {
+        category: 'other',
         icon: faEgg,
         unit: 'package',
         products: [{
@@ -150,6 +156,6 @@ const productsList = [{
             },
         ],
     }
-}];
+];
 
 export default productsList;
