@@ -1,0 +1,25 @@
+$color-blue: #0c5c78;
+$color-violet: #380036;
+$color-grey: #818181;
+.button {
+    display: block;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 7px 12px;
+    font-weight: 500;
+    background: transparent;
+    border: 2px solid $color-grey;
+    color: $color-grey;
+    cursor: pointer;
+}
+
+.secondary {
+    @extend .button;
+    width: 120px;
+    background-color: white;
+    border-color: white;
+    color: $color-blue;
+    font-weight: 700;
+    font-size: 0.8em;
+    box-shadow: 0 5px 20px -5px rgba($color-blue, 0.9);
+}

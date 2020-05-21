@@ -5,7 +5,7 @@ import ListItem from './ListItem/ListItem';
 const ListWrapper = (props) => (
     <ul className={styles.wrapper}>
         {props.items.map(item => (
-            <ListItem key={item} {...item} />
+            <ListItem key={item.id} {...item} />
         ))}
     </ul>
 );

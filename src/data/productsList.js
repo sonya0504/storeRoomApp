@@ -7,6 +7,7 @@ import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import { faOilCan } from '@fortawesome/free-solid-svg-icons';
 
 const productsList = [{
+        id: 0,
         category: 'fruits and vegetables',
         icon: faPepperHot,
         unit: 'kg',
@@ -37,6 +38,7 @@ const productsList = [{
         ],
     },
     {
+        id: 1,
         category: 'meat and fish',
         icon: faDrumstickBite,
         unit: 'kg',
@@ -63,6 +65,7 @@ const productsList = [{
         ],
     },
     {
+        id: 2,
         category: 'flour, pasta and groats',
         icon: faBoxes,
         unit: 'package',
@@ -89,6 +92,7 @@ const productsList = [{
         ],
     },
     {
+        id: 3,
         category: 'beverages / drink',
         icon: faWineBottle,
         unit: 'l',
@@ -107,6 +111,7 @@ const productsList = [{
         ],
     },
     {
+        id: 4,
         category: 'oil',
         icon: faOilCan,
         unit: 'l',
@@ -125,6 +130,7 @@ const productsList = [{
         ],
     },
     {
+        id: 5,
         category: 'nuts',
         icon: faSeedling,
         unit: 'package',
@@ -143,6 +149,7 @@ const productsList = [{
         ],
     },
     {
+        id: 6,
         category: 'other',
         icon: faEgg,
         unit: 'package',
