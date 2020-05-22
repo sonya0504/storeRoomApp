@@ -58,6 +58,8 @@ class Root extends React.Component {
             <Route path="/settings" component={SettingsView} />
             <Route path="/shoppinglist" component={ShoppingListView} />
           </Switch>
+          <ListWrapper items={this.state.items}/>
+          <Form submitFn={this.addItem} items={this.state.items}/>
         </>
       </BrowserRouter>
     );

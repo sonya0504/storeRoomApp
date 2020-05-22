@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './ListItem.module.scss';
 
@@ -22,5 +23,12 @@ const ListItem = ({
         </ul>
     </li>
 );
+
+ListItem.propTypes = {
+    icon: PropTypes.object.isRequired,
+    category: PropTypes.string.isRequired,
+    unit: PropTypes.string.isRequired,
+    products: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
 
 export default ListItem;

@@ -24,20 +24,3 @@ $color-grey: #818181;
     justify-content: center;
     align-items: flex-start;
 }
-
-.button {
-    font-size: 10px;
-    text-decoration: none;
-    padding: 7px 12px;
-    font-weight: 500;
-    background: none;
-    border: 2px solid $color-blue;
-    color: white;
-    background-color: $color-blue;
-    margin: 0 auto;
-    cursor: pointer;
-    &:hover {
-        color: $color-blue;
-        background-color: white;
-    }
-}
