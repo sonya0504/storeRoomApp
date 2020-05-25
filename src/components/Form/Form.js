@@ -14,7 +14,7 @@ const Form = ({submitFn, items}) => (
             onSubmit={submitFn}
             category={items}
         >
-            <Select category={items} />
+            <Select category={items}/>
             <Input name="name" label="Name" />
             <Input name="amount" label="Amount" />
             <Button>add new item</Button>

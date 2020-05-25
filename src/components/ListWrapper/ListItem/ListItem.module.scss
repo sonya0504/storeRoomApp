@@ -1,11 +1,24 @@
 $color-blue: #0c5c78;
 $color-violet: #380036;
 $color-grey: #818181;
+@keyframes appear {
+    0% {
+        opacity: 0;
+        top: 35px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .listItem {
     margin-top: 20px;
     min-height: 80px;
     width: 30%;
     border: 1px solid $color-violet;
+    position: relative;
+    animation: appear 0.5s ease;
     .header {
         display: flex;
         justify-content: space-between;
