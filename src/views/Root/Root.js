@@ -6,9 +6,9 @@ import ShoppingListView from "../ShoppingListView/ShoppingListView";
 import SettingsView from "../SettingsView/SettingsView";
 import ListWrapper from "components/ListWrapper/ListWrapper";
 import productsList from "data/productsList";
-import Form from "components/Form/Form";
 import { faPepperHot } from "@fortawesome/free-solid-svg-icons";
 import Header from 'components/Header/Header';
+import Modal  from 'components/Modal/Modal';
 
 class Root extends React.Component {
   state = {
@@ -59,7 +59,7 @@ class Root extends React.Component {
             <Route path="/shoppinglist" component={ShoppingListView} />
           </Switch>
           <ListWrapper items={this.state.items}/>
-          <Form submitFn={this.addItem} items={this.state.items}/>
+          <Modal submitFn={this.addItem} items={this.state.items}/>
         </>
       </BrowserRouter>
     );

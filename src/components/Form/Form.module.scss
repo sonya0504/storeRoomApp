@@ -2,14 +2,11 @@ $color-blue: #0c5c78;
 $color-violet: #380036;
 $color-grey: #818181;
 .wrapper {
-    width: 50%;
-    margin: 50px auto 100px;
-    background-color: white;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, .3);
+    width: 100%;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 30px 40px;
 }
 
 .wrapper h2 {
@@ -23,4 +20,7 @@ $color-grey: #818181;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    button {
+        margin-top: 50px;
+    }
 }
