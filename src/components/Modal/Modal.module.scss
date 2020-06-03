@@ -1,3 +1,12 @@
+$color-blue: #0c5c78;
+.wrapperRoot {
+    width: 100vw;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+}
+
 .wrapper {
     top: 50%;
     transform: translateY(-50%);
@@ -8,8 +17,49 @@
     height: auto;
     max-height: 70vw;
     background-color: white;
+    border: 2px solid $color-blue;
     color: #000;
-    box-shadow: 0 10px 40px -15px rgba(#818181, 0.5);
+    box-shadow: 0 10px 40px -15px rgba($color-blue, 0.5);
     position: fixed;
     padding: 0 30px 40px;
+}
+
+.closeButton {
+    width: 27px;
+    height: 27px;
+    border: 2px solid $color-blue;
+    color: white;
+    background-color: $color-blue;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    &::before,
+    &::after {
+        content: "";
+        width: 16px;
+        height: 2px;
+        position: absolute;
+        background: white;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        transform-origin: 50%;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+    &:hover {
+        background: white;
+        &::after,
+        &::before {
+            background: $color-blue;
+        }
+    }
 }

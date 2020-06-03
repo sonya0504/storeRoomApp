@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
-const Button = ({children, secondary}) => {
+const Button = ({children, secondary, ...props}) => {
   
   const buttonClass = secondary ? styles.secondary : styles.button;
 
   return (
     
-  <button className={buttonClass}>{children}</button>
+  <button className={buttonClass} {...props}>{children}</button>
   )
 };
 

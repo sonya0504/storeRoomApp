@@ -2,17 +2,19 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./index.css";
 import CategoriesView from "../CategoriesView/CategoriesView";
+import RecipesView from "../RecipesView/RecipesView";
 import ShoppingListView from "../ShoppingListView/ShoppingListView";
 import SettingsView from "../SettingsView/SettingsView";
 import ListWrapper from "components/ListWrapper/ListWrapper";
 import productsList from "data/productsList";
 import { faPepperHot } from "@fortawesome/free-solid-svg-icons";
-import Header from 'components/Header/Header';
-import Modal  from 'components/Modal/Modal';
+import Header from "components/Header/Header";
+import Modal from "components/Modal/Modal";
 
 class Root extends React.Component {
   state = {
     items: [...productsList],
+    isModalOpen: false,
   };
 
   addItem = (e) => {
@@ -47,19 +49,33 @@ class Root extends React.Component {
     e.target.reset();
   };
 
+  openModal = () => {
+    this.setState({
+      isModalOpen: true,
+    });
+  };
+
+  closeModal = () => {
+    this.setState({
+      isModalOpen: false,
+    });
+  };
+
   render() {
+    const { isModalOpen } = this.state;
     return (
       <BrowserRouter>
         <>
-          <Header />
+          <Header openModalFn={this.openModal} />
           <h1>StoreRoomApp</h1>
           <Switch>
             <Route exact path="/" component={CategoriesView} />
-            <Route path="/settings" component={SettingsView} />
+            <Route path="/recipes" component={RecipesView} />
             <Route path="/shoppinglist" component={ShoppingListView} />
+            <Route path="/settings" component={SettingsView} />
           </Switch>
-          <ListWrapper items={this.state.items}/>
-          <Modal submitFn={this.addItem} items={this.state.items}/>
+          <ListWrapper items={this.state.items} />
+          {isModalOpen && <Modal submitFn={this.addItem} items={this.state.items} closeModalFn={this.closeModal} />}
         </>
       </BrowserRouter>
     );
