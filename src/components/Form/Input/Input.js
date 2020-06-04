@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Input.module.scss';
 
-const Input = ({name, label}) => (
+const Input = ({tag: Tag, name, label}) => (
     <div className={styles.item}>
-        <input
-            className={styles.input}
+        <Tag
+            className={Tag === 'textarea' ? styles.textarea : styles.input}
             type="text"
             name={name}
             id={name}
@@ -20,6 +20,7 @@ const Input = ({name, label}) => (
 );
 
 Input.propTypes = {
+    tag: PropTypes.string,
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
   }

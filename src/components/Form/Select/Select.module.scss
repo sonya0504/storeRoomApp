@@ -38,3 +38,12 @@ $color-grey: #818181;
         background-color: white;
     }
 }
+
+.label {
+    color: #7d7d7d;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    transition: .2s ease-out all;
+    font-size: 16px;
+}

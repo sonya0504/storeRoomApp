@@ -18,12 +18,8 @@ const Select = ({ category }) =>  (
                 ))}
             </select>
             <label 
-                className={styles.selectLabel}
+                className={styles.label}
                 htmlFor="categories">Choose a category:
-            </label>
-            <label 
-                className={styles.selectLabel}
-                htmlFor="icons">Choose a category:
             </label>
         </div>
     );
