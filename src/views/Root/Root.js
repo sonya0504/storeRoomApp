@@ -1,4 +1,5 @@
 import React from "react";
+import AppContext from "context";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./index.css";
 import CategoriesView from "../CategoriesView/CategoriesView";
@@ -15,6 +16,7 @@ class Root extends React.Component {
   state = {
     items: [...productsList],
     isModalOpen: false,
+    name: "Sonia",
   };
 
   addItem = (e) => {
@@ -65,7 +67,7 @@ class Root extends React.Component {
     const { isModalOpen } = this.state;
     return (
       <BrowserRouter>
-        <>
+        <AppContext.Provider value={this.state.name}>
           <Header openModalFn={this.openModal} />
           <h1>StoreRoomApp</h1>
           <Switch>
@@ -76,7 +78,7 @@ class Root extends React.Component {
           </Switch>
           <ListWrapper items={this.state.items} />
           {isModalOpen && <Modal submitFn={this.addItem} items={this.state.items} closeModalFn={this.closeModal} />}
-        </>
+        </AppContext.Provider>
       </BrowserRouter>
     );
   }
