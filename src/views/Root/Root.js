@@ -16,7 +16,11 @@ class Root extends React.Component {
   state = {
     items: [...productsList],
     isModalOpen: false,
-    name: "Sonia",
+    itemsContext: {
+      categories: [],
+      recipes: [],
+      shoppingList: [],
+    }
   };
 
   addItem = (e) => {
@@ -65,9 +69,14 @@ class Root extends React.Component {
 
   render() {
     const { isModalOpen } = this.state;
+    const { Provider } = AppContext;
+    const contextElements = {
+      ...this.state,
+      addItem: this.addItem
+    }
     return (
       <BrowserRouter>
-        <AppContext.Provider value={this.state.name}>
+        <Provider value={contextElements}>
           <Header openModalFn={this.openModal} />
           <h1>StoreRoomApp</h1>
           <Switch>
@@ -77,8 +86,8 @@ class Root extends React.Component {
             <Route path="/settings" component={SettingsView} />
           </Switch>
           <ListWrapper items={this.state.items} />
-          {isModalOpen && <Modal submitFn={this.addItem} items={this.state.items} closeModalFn={this.closeModal} />}
-        </AppContext.Provider>
+          {isModalOpen && <Modal items={this.state.items} closeModalFn={this.closeModal} />}
+        </Provider>
       </BrowserRouter>
     );
   }
